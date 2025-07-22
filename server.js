@@ -9,6 +9,9 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { randomUUID } = require('crypto');
 const cors = require('cors');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on ${PORT}`));
+
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || '';
 let openai = null;
